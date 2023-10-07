@@ -5,6 +5,9 @@
   padding: 0px;
   font-family : 'Rajdhani', sans-serif;
   font-size:12px;
+  box-sizing: border-box;
+  color: white;
+  
 }
 
 body {
@@ -14,6 +17,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: black;
+    overflow: hidden;
 }
 
 .kotak{
@@ -30,22 +34,49 @@ body {
     
 }
 
-ul{
-    list-style: none;
+nav{
+    display:flex;
+    flex-direction: column;
     position: absolute;
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
+    
+    & h1{
+        font-size: 2rem;
+    }
+}
+
+
+
+ul{
+    list-style: none;
     display: flex;
     gap: 5vw;
+    
+    & li:hover{
+        border-bottom: 2px solid white;
+        position:relative;
+        margin-bottom:-2px;
+        transition:250ms;
+    }
+    
+    & a:first-child li{
+        border-bottom: 2px solid white;
+        position:relative;
+        margin-bottom:-2px;
+        
+    }
 }
 
 
 
 li{
+    width:128px;
     font-size:4em;
     text-align: center;
     color:white;
+    
 }
 
 a{
@@ -57,38 +88,63 @@ a{
   /* height: 2em;
   width: 2em; */
   border-radius: 100%;
-  border: 2px solid white ;
+  border: 2px solid #ffffff ;
   display: inline-block;
-  animation: droplet 4s ease-in-out ;
+  animation: droplet 8s ease-in-out ;
   
   position: absolute;
-  top: 200px;
-  left: 200px;
 }
 
 
 @keyframes droplet{
     0%{
-        
         width: 0.1em;
         height: 0.1em;
     }
     
-    50% {
-        width:1em;
-        height: 1em;
-        scale: 2;
+    50%{
+        transform: scale(10);
     }
     
-    100%{scale: 3; opacity:0%;}
+    100%{
+        opacity: 0%;
+    }
+    
 
 }
+
+.type-effect {
+  animation: type 1s ease-in-out;
+}
+
+@keyframes type {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+
 @media only screen and (max-width:676px){
 
-    ul{
-        flex-direction: column;
-    }
-   
+ul{
+    flex-direction: column;
+}
+
+.line-1{
+    top:20%;
+}
+
+nav{
+    align-items: center;
+
 }
 
 
+}
