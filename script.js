@@ -116,7 +116,7 @@ function typeEffect(text, element) {
     type();
 }
 
-// Example usage:
+
 const text = "Welcome Stranger! Have take a look";
 const element = document.getElementById("type-effect");
 

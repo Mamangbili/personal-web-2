@@ -55,9 +55,8 @@ ul{
     gap: 5vw;
     
     & li:hover{
-        border-bottom: 2px solid white;
-        position:relative;
-        margin-bottom:-2px;
+        box-shadow: 0 -1px 0 white inset;
+
         transition:250ms;
     }
     
