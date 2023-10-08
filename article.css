@@ -28,12 +28,10 @@ main {
   display: flex;
   justify-content: center;
   overflow-y: auto;
-  
 }
 
 a {
   text-decoration: none;
-  
 }
 
 nav {
@@ -48,7 +46,7 @@ nav {
       box-shadow: 0 1px 0 white;
     }
 
-    & a:nth-child(3) li {
+    & a:nth-child(4) li {
       border-bottom: 1px solid white;
     }
   }
@@ -74,7 +72,7 @@ h1 {
 
 main p {
   font-size: 1.5em;
-
+    padding-block: 1rem;
   &::before {
     content: "";
     display: inline-block;
@@ -83,20 +81,15 @@ main p {
   }
 }
 
-
-
-
-#list-porto {
+#list-article {
   list-style: none;
   gap: 3em;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  
 }
 
-#list-porto a li {
-
+#list-article a li {
   border-left: 1px solid white;
   border-top: 1px solid white;
   width: 25em;
@@ -107,19 +100,16 @@ main p {
     transition: 200ms;
     cursor: pointer;
   }
-  
+
   & div {
     padding-block: 5px;
     padding-inline: 20px;
   }
-  
- 
 }
 
 h2 {
-    font-size:2rem;
+  font-size: 2rem;
 }
-
 
 @media only screen and (max-width: 958px) {
   main {
@@ -144,47 +134,44 @@ h2 {
   }
 }
 
-.circle{
-    /* height: 2em;
+.circle {
+  /* height: 2em;
     width: 2em; */
-    border-radius: 100%;
-    border: 2px solid #ffffff ;
-    display: inline-block;
-    animation: droplet 8s ease-in-out ;
-    
-    position: absolute;
+  border-radius: 100%;
+  border: 2px solid #ffffff;
+  display: inline-block;
+  animation: droplet 8s ease-in-out;
+
+  position: absolute;
+}
+
+@keyframes droplet {
+  0% {
+    width: 0.1em;
+    height: 0.1em;
   }
-  
-  
-  @keyframes droplet{
-      0%{
-          width: 0.1em;
-          height: 0.1em;
-      }
-      
-      50%{
-          transform: scale(10);
-      }
-      
-      100%{
-          opacity: 0%;
-      }
-      
-  
+
+  50% {
+    transform: scale(10);
   }
-  
-  ::-webkit-scrollbar {
-    width: 0.5rem;
+
+  100% {
+    opacity: 0%;
   }
-  
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: #888;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
