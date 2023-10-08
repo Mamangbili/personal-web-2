@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700 &display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 12px;
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background-color: black;
+  overflow: hidden;
+  gap: 5vw;
+}
+
+main {
+  margin-left: 1.5vw;
+  width: 90vw;
+  height: 97%;
+  border: 1px solid #fb2576;
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  
+}
+
+nav {
+  & ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
+    list-style: none;
+
+    & li:hover {
+      transition: 250ms;
+      box-shadow: 0 1px 0 white;
+    }
+
+    & a:nth-child(3) li {
+      border-bottom: 1px solid white;
+    }
+  }
+
+  & li {
+    font-size: 4em;
+  }
+}
+
+main > div:first-child {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-block: 2vh;
+}
+
+h1 {
+  font-size: 4em;
+  border-bottom: 1px solid white;
+  margin-bottom: 2vh;
+}
+
+main p {
+  font-size: 1.5em;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 1em;
+    height: 1.5em;
+  }
+}
+
+
+
+
+#list-porto {
+  list-style: none;
+  gap: 3em;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+}
+
+#list-porto a li {
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  width: 30em;
+  height: 10em;
+
+  &:hover {
+    box-shadow: 2px 5px white;
+    transition: 200ms;
+    cursor: pointer;
+  }
+  
+  & div {
+    padding-block: 5px;
+    padding-inline: 20px;
+  }
+}
+
+h2 {
+    font-size:2rem;
+}
+p {
+    font-size: 1rem;
+}
+
+@media only screen and (max-width: 958px) {
+  main {
+    margin-left: 0;
+    margin-top: 1.5vh;
+    width: 97vw;
+  }
+
+  body {
+    flex-direction: column;
+  }
+
+  nav {
+    & ul {
+      flex-direction: row;
+      gap: 5vw;
+    }
+
+    & li {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+.circle{
+    /* height: 2em;
+    width: 2em; */
+    border-radius: 100%;
+    border: 2px solid #ffffff ;
+    display: inline-block;
+    animation: droplet 8s ease-in-out ;
+    
+    position: absolute;
+  }
+  
+  
+  @keyframes droplet{
+      0%{
+          width: 0.1em;
+          height: 0.1em;
+      }
+      
+      50%{
+          transform: scale(10);
+      }
+      
+      100%{
+          opacity: 0%;
+      }
+      
+  
+  }
+  

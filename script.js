@@ -1,20 +1,27 @@
-let border = document.getElementsByClassName('border')[0];
-border = border.getBoundingClientRect()
-const borderWidth = border.width;
-const borderHeight = border.height;
+let container = document.getElementsByClassName('border')[0];
+
 
 const myRandom = (min, max) => Math.random() * (max - min) + min
 
-function createDroplet() {
-    const top = myRandom(0.1, 0.9) * borderHeight;
-    const left = myRandom(0.1, 1) * borderHeight;
+function getTopAndLeft(element){
+    element = container.getBoundingClientRect()
+    const borderWidth = element.width;
+    const borderHeight = element.height;
+    return [borderHeight, borderWidth]
+}
+
+function createDroplet(container) {
+    let [topMax,leftMax] = getTopAndLeft(container)
+    const topPos = myRandom(0.1, 1) * topMax;
+    const leftPos = myRandom(0.1, 1) * leftMax;
+
+
     const droplet = document.createElement('div');
     droplet.style.position = "absolute"
-    const border = document.getElementsByClassName("border")[0];
-    border.appendChild(droplet);
+    container.appendChild(droplet);
 
-    droplet.style.top = top + 'px';
-    droplet.style.left = left + 'px';
+    droplet.style.top = topPos + 'px';
+    droplet.style.left = leftPos + 'px';
     droplet.classList.add('circle')
 
     droplet.addEventListener('animationend', function () {
@@ -23,24 +30,24 @@ function createDroplet() {
 }
 
 setInterval(() => {
-    createDroplet();
+    createDroplet(container);
 }, 4400);
 
 setInterval(() => {
-    createDroplet();
+    createDroplet(container);
 }, 2800);
 
 setInterval(() => {
-    createDroplet();
+    createDroplet(container);
 }, 1800);
 
 setInterval(() => {
-    createDroplet();
+    createDroplet(container);
 }, 6000);
 
 
 setInterval(() => {
-    createDroplet();
+    createDroplet(container);
 }, 3400);
 
 

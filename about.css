@@ -123,6 +123,7 @@ img{
         flex-direction: column;
     }
     
+    
     ul {
         flex-direction: row;
         gap:5vw;
