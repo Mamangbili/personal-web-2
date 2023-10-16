@@ -120,6 +120,7 @@ h2 {
 
   body {
     flex-direction: column;
+    gap:1svh;
   }
 
   nav {

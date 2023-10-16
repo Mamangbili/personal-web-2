@@ -120,7 +120,7 @@ h2 {
 
   body {
     flex-direction: column;
-    gap: 3vh;
+    gap: 1svh;
   }
 
   nav {
@@ -151,7 +151,7 @@ h2 {
     width: 0.1em;
     height: 0.1em;
   }
-
+  
   50% {
     transform: scale(10);
   }
