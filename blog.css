@@ -17,14 +17,13 @@ body {
   align-items: center;
   background-color: black;
   overflow: hidden;
-  gap: 3vh;
-
+  gap: 3svh;
 }
 
 main {
   margin-left: 1.5vw;
   width: 90vw;
-  height: 97%;
+  height: 97svh;
   border: 1px solid #fb2576;
   display: flex;
   justify-content: center;
