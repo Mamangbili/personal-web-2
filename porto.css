@@ -120,10 +120,11 @@ h2 {
 
   body {
     flex-direction: column;
+  gap: 3vh;
+    
   }
 
   nav {
-    margin-top: -2vh;
 
     & ul {
       flex-direction: row;

@@ -107,6 +107,10 @@ img {
     /* justify-content: start; */
   }
 
+  body {
+    gap: 3vh;
+  }
+
   main {
     margin-top: -5vh;
     margin-left: 0px;

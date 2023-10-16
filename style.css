@@ -121,6 +121,10 @@ a {
     flex-direction: column;
   }
 
+  body {
+    gap: 3vh;
+  }
+
   .line-1 {
     top: 20%;
   }
